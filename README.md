@@ -31,16 +31,15 @@ This boilerplate includes:
 - Switch theme
 - Apply storybook and unit test
 
-
 ## TARGET
 
-* Get familiar with the outstanding features of Next.js especially routing, caching, streaming and data fetching.
-* Know how a Next.js application works and accomplish a full-stack web application.
-* Distinguish between server, client directives and use it correspondingly for each case.
-* Handle errors and be aware of which errors should be shown for each situation.
-* Bear in mind that improving accessibility will be always involved.
-* Get to know metadata which is crucial for SEO and shareability.
-* Apply new tool content layer to build a blog by with next.js.
+- Get familiar with the outstanding features of Next.js especially routing, caching, streaming and data fetching.
+- Know how a Next.js application works and accomplish a full-stack web application.
+- Distinguish between server, client directives and use it correspondingly for each case.
+- Handle errors and be aware of which errors should be shown for each situation.
+- Bear in mind that improving accessibility will be always involved.
+- Get to know metadata which is crucial for SEO and shareability.
+- Apply new tool content layer to build a blog by with next.js.
 
 ## How to run
 
@@ -59,10 +58,10 @@ Check and update config image hosting on `next.config.mjs` file follow [Next.js 
 
 ### Get source code
 
-| Command                                                                                                             | Action                      |
-| :------------------------------------------------------------------------------------------------------------------ | :-------------------------- |
-| `git clone https://gitlab.asoft-python.com/kien.nguyen/blog-app.git`                                                | Clone Repository with HTTPS |
-| `$ cd blog-app`                                                                                                     | Redirect to folder          |
+| Command                                                              | Action                      |
+| :------------------------------------------------------------------- | :-------------------------- |
+| `git clone https://gitlab.asoft-python.com/kien.nguyen/blog-app.git` | Clone Repository with HTTPS |
+| `$ cd blog-app`                                                      | Redirect to folder          |
 
 ### Build and Run app
 
