@@ -1,33 +1,31 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { ReactNode } from 'react';
 
-// Components
-import Header from '@/layouts/Header';
 import './globals.css';
+import { Inter, Manrope } from 'next/font/google';
+import Header from '@/layouts/Header';
+import Footer from '@/layouts/Footer.tsx';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-in',
+});
 
-export const metadata: Metadata = {
-  title: 'Next.js Boilerplate',
-  description: 'Next.js 14+ boilerplate app',
-  icons: [
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-  ],
-};
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mr',
+});
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`${inter.variable} ${manrope.variable} font-mr bg-light dark:bg-dark`}
+      >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
