@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import './globals.css';
 import { Inter, Manrope } from 'next/font/google';
 import Header from '@/layouts/Header';
-import Footer from '@/layouts/Footer.tsx';
+import Footer from '@/layouts/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
