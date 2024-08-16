@@ -1,7 +1,14 @@
+import { allBlogs } from '../../.contentlayer/generated';
+import HomeCoverSection from '@/components/HomeCoverSection';
+import FeaturedPosts from '@/components/FeaturePost';
+import RecentPosts from '@/components/RecentPost';
+
 const Homepage = () => {
   return (
-    <main className="container mx-auto">
-      <h1 className="text-lg font-semibold">This is homepage</h1>
+    <main className="flex flex-col items-center justify-center">
+      <HomeCoverSection blogs={allBlogs} />
+      <FeaturedPosts blogs={allBlogs} />
+      <RecentPosts blogs={allBlogs} />
     </main>
   );
 };
