@@ -34,7 +34,7 @@ exports[`renders Footer component and matches snapshot 1`] = `
       <a
         aria-label="Reach out to me via LinkedIn"
         class="inline-block w-6 h-6 mr-4"
-        href="#"
+        href="https://www.linkedin.com/in/codebucks/"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -52,7 +52,7 @@ exports[`renders Footer component and matches snapshot 1`] = `
       <a
         aria-label="Reach out to me via Twitter"
         class="inline-block w-6 h-6 mr-4"
-        href="#"
+        href="https://twitter.com/code_bucks"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -70,7 +70,7 @@ exports[`renders Footer component and matches snapshot 1`] = `
       <a
         aria-label="Check my profile on Github"
         class="inline-block w-6 h-6 mr-4 fill-light"
-        href="#"
+        href="https://github.com/codebucks27"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -88,7 +88,7 @@ exports[`renders Footer component and matches snapshot 1`] = `
       <a
         aria-label="Check my profile on Dribbble"
         class="inline-block w-6 h-6 mr-4"
-        href="#"
+        href="https://www.dribbble.com"
         rel="noopener noreferrer"
         target="_blank"
       >
