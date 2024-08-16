@@ -1,8 +1,15 @@
 'use client';
 import Link from 'next/link';
-import { LinkedinIcon, TwitterIcon, GithubIcon, DribbleIcon } from '@/icons';
 import { useState } from 'react';
+
+// icons
+import { LinkedinIcon, TwitterIcon, GithubIcon, DribbleIcon } from '@/icons';
+
+// components
 import Logo from '@/components/Logo';
+
+// utils
+import siteMetadata from '@/utils/siteMetaData';
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -51,7 +58,7 @@ const Header = () => {
 
       <div className="hidden sm:flex items-center">
         <a
-          href="/"
+          href={siteMetadata.linkedin}
           rel="noopener noreferrer"
           className="inline-block w-6 h-6 mr-4"
           aria-label="Reach out to me via LinkedIn"
@@ -60,7 +67,7 @@ const Header = () => {
           <LinkedinIcon customClass="hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href="/"
+          href={siteMetadata.twitter}
           rel="noopener noreferrer"
           className="inline-block w-6 h-6 mr-4"
           aria-label="Reach out to me via Twitter"
@@ -69,7 +76,7 @@ const Header = () => {
           <TwitterIcon customClass="hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href="/"
+          href={siteMetadata.github}
           rel="noopener noreferrer"
           className="inline-block w-6 h-6 mr-4"
           aria-label="Check my profile on Github"
@@ -78,7 +85,7 @@ const Header = () => {
           <GithubIcon customClass="hover:scale-125 transition-all ease duration-200 dark:fill-light" />
         </a>
         <a
-          href="/"
+          href={siteMetadata.dribbble}
           rel="noopener noreferrer"
           className="inline-block w-6 h-6 mr-4"
           aria-label="Check my profile on Dribbble"

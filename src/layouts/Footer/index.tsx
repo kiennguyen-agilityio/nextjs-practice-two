@@ -2,6 +2,7 @@
 import React from 'react';
 import { DribbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '@/icons';
 import Link from 'next/link';
+import siteMetadata from '@/utils/siteMetaData';
 
 const Footer = () => {
   return (
@@ -31,7 +32,7 @@ const Footer = () => {
 
       <div className="flex items-center mt-8">
         <a
-          href="#"
+          href={siteMetadata.linkedin}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Reach out to me via LinkedIn"
           target="_blank"
@@ -40,7 +41,7 @@ const Footer = () => {
           <LinkedinIcon customClass="hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href="#"
+          href={siteMetadata.twitter}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Reach out to me via Twitter"
           target="_blank"
@@ -49,7 +50,7 @@ const Footer = () => {
           <TwitterIcon customClass="hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href="#"
+          href={siteMetadata.github}
           className="inline-block w-6 h-6 mr-4 fill-light"
           aria-label="Check my profile on Github"
           target="_blank"
@@ -58,7 +59,7 @@ const Footer = () => {
           <GithubIcon customClass="fill-light dark:fill-dark hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href="#"
+          href={siteMetadata.dribbble}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Check my profile on Dribbble"
           target="_blank"
