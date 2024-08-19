@@ -10,6 +10,7 @@ import Logo from '@/components/Logo';
 
 // utils
 import siteMetadata from '@/utils/siteMetaData';
+import ThemeSwitch from '@/components/common/ThemeSwitch';
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -30,20 +31,42 @@ const Header = () => {
         <div className="w-6 cursor-pointer transition-all ease duration-300">
           <div className="relative">
             <span
-              className={`absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200 ${click ? 'rotate-[-45deg] translate-y-0' : 'rotate-0 translate-y-[6px]'}`}
-            />
+              className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
+              style={{
+                transform: click
+                  ? 'rotate(-45deg) translateY(0)'
+                  : 'rotate(0deg) translateY(6px)',
+              }}
+            >
+              &nbsp;
+            </span>
             <span
-              className={`absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200 ${click ? 'opacity-0' : 'opacity-100'}`}
-            />
+              className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
+              style={{
+                opacity: click ? 0 : 1,
+              }}
+            >
+              &nbsp;
+            </span>
             <span
-              className={`absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200 ${click ? 'rotate-[45deg] translate-y-0' : 'rotate-0 translate-y-[-6px]'}`}
-            />
+              className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
+              style={{
+                transform: click
+                  ? 'rotate(45deg) translateY(0)'
+                  : 'rotate(0deg) translateY(-6px)',
+              }}
+            >
+              &nbsp;
+            </span>
           </div>
         </div>
       </button>
 
       <nav
-        className={`w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-full font-medium capitalize items-center flex fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50 transition-all ease duration-300 ${click ? 'top-6 opacity-100' : '-top-20 opacity-0'} sm:static sm:opacity-100 sm:flex sm:translate-x-0 sm:bg-transparent sm:backdrop-blur-none`}
+        className="w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-full font-medium capitalize items-center flex sm:hidden fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50 transition-all ease duration-300"
+        style={{
+          top: click ? '1rem' : '-5rem',
+        }}
       >
         <Link href="/" className="mr-2">
           Home
@@ -54,6 +77,20 @@ const Header = () => {
         <Link href="/contact" className="mx-2">
           Contact
         </Link>
+        <ThemeSwitch />
+      </nav>
+
+      <nav className="w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize items-center hidden sm:flex fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50">
+        <Link href="/" className="mr-2">
+          Home
+        </Link>
+        <Link href="/about" className="mx-2">
+          About
+        </Link>
+        <Link href="/contact" className="mx-2">
+          Contact
+        </Link>
+        <ThemeSwitch />
       </nav>
 
       <div className="hidden sm:flex items-center">
