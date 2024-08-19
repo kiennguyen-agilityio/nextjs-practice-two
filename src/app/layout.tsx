@@ -3,13 +3,9 @@ import { Inter, Manrope } from 'next/font/google';
 
 import './globals.css';
 
-// layouts
-import Header from '@/layouts/Header';
-import Footer from '@/layouts/Footer';
-
 // utils
 import siteMetadata from '@/utils/siteMetaData';
-import { ThemeProvider } from 'next-themes';
+import ThemeProviderWrapper from './provider';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,7 +22,7 @@ const manrope = Manrope({
 export const metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
-    template: `%s | ${siteMetadata.title}`,
+    template: '%s | ' + siteMetadata.title,
     default: siteMetadata.title,
   },
   description: siteMetadata.description,
@@ -60,19 +56,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${inter.variable} ${manrope.variable} font-mr bg-light dark:bg-dark`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem={true}
-        >
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <ThemeProviderWrapper>{children}</ThemeProviderWrapper>
       </body>
     </html>
   );
