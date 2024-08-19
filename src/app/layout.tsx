@@ -9,7 +9,7 @@ import Footer from '@/layouts/Footer';
 
 // utils
 import siteMetadata from '@/utils/siteMetaData';
-import Script from 'next/script';
+import { ThemeProvider } from 'next-themes';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,7 +27,7 @@ export const metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
     template: `%s | ${siteMetadata.title}`,
-    default: siteMetadata.title, // a default is required when creating a template
+    default: siteMetadata.title,
   },
   description: siteMetadata.description,
   openGraph: {
@@ -60,20 +60,19 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${manrope.variable} font-mr bg-light dark:bg-dark`}
       >
-        <Script id="theme-switcher" strategy="beforeInteractive">
-          {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }`}
-        </Script>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

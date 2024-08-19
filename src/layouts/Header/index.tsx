@@ -3,24 +3,16 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 // icons
-import {
-  LinkedinIcon,
-  TwitterIcon,
-  GithubIcon,
-  DribbleIcon,
-  MoonIcon,
-  SunIcon,
-} from '@/icons';
+import { LinkedinIcon, TwitterIcon, GithubIcon, DribbleIcon } from '@/icons';
 
 // components
 import Logo from '@/components/Logo';
 
 // utils
 import siteMetadata from '@/utils/siteMetaData';
-import { useThemeSwitch } from '@/hooks/useThemeSwitch';
+import ThemeSwitch from '@/components/common/ThemeSwitch';
 
 const Header = () => {
-  const [mode, setMode] = useThemeSwitch();
   const [click, setClick] = useState(false);
 
   const toggle = () => {
@@ -85,17 +77,7 @@ const Header = () => {
         <Link href="/contact" className="mx-2">
           Contact
         </Link>
-        <button
-          onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-          className={`w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}
-          aria-label="theme-switcher"
-        >
-          {mode === 'light' ? (
-            <MoonIcon customClass="fill-dark" />
-          ) : (
-            <SunIcon customClass="fill-dark" />
-          )}
-        </button>
+        <ThemeSwitch />
       </nav>
 
       <nav className="w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize items-center hidden sm:flex fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50">
@@ -108,17 +90,7 @@ const Header = () => {
         <Link href="/contact" className="mx-2">
           Contact
         </Link>
-        <button
-          onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-          className={`w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}
-          aria-label="theme-switcher"
-        >
-          {mode === 'light' ? (
-            <MoonIcon customClass="fill-dark" />
-          ) : (
-            <SunIcon customClass="fill-dark" />
-          )}
-        </button>
+        <ThemeSwitch />
       </nav>
 
       <div className="hidden sm:flex items-center">
