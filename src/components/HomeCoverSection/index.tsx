@@ -1,16 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { slug } from 'github-slugger';
-import { sortBlogs } from '../../utils';
-import { Blog } from '../../../.contentlayer/generated';
+
+// data
+import { Blog } from '.contentlayer/generated';
+
+// components
 import Tab from '@/components/Tab';
+
+// utils
+import { sortBlogs } from '@/utils';
 
 interface HomeCoverSectionProps {
   blogs: Blog[];
 }
 
-const HomeCoverSection: React.FC<HomeCoverSectionProps> = ({ blogs }) => {
+const HomeCoverSection = ({ blogs }: HomeCoverSectionProps) => {
   const sortedBlogs = sortBlogs(blogs);
   const blog = sortedBlogs[0];
 

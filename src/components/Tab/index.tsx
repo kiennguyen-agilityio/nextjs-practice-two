@@ -7,12 +7,7 @@ interface TagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   className?: string;
 }
 
-const Tag: React.FC<TagProps> = ({
-  link = '#',
-  name,
-  className = '',
-  ...props
-}) => {
+const Tag = ({ link = '#', name, className = '', ...props }: TagProps) => {
   return (
     <Link
       href={link}

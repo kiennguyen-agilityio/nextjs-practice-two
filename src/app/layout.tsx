@@ -22,7 +22,7 @@ const manrope = Manrope({
 export const metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
-    template: '%s | ' + siteMetadata.title,
+    template: `%s | ${siteMetadata.title}`,
     default: siteMetadata.title,
   },
   description: siteMetadata.description,
@@ -56,7 +56,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${manrope.variable} font-mr bg-light dark:bg-dark`}
       >
