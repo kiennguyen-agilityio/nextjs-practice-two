@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { AnchorHTMLAttributes } from 'react';
+import { AnchorHTMLAttributes } from 'react';
 
 interface TagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   link?: string;

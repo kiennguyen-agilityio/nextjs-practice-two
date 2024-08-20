@@ -1,8 +1,6 @@
-import React from 'react';
-import { sortBlogs } from '../../utils';
-import BlogLayoutOne from '../Blogs/BlogLayoutOne';
-import BlogLayoutTwo from '../Blogs/BlogLayoutTwo';
-import { Blog } from '../../../.contentlayer/generated';
+import { sortBlogs } from '@/utils';
+import { BlogLayoutOne, BlogLayoutTwo } from '@/components';
+import { Blog } from '.contentlayer/generated';
 
 interface FeaturedPostsProps {
   blogs: Blog[];

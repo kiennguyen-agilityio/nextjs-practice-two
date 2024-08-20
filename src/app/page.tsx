@@ -1,7 +1,5 @@
-import { allBlogs } from '../../.contentlayer/generated';
-import HomeCoverSection from '@/components/HomeCoverSection';
-import FeaturedPosts from '@/components/FeaturePost';
-import RecentPosts from '@/components/RecentPost';
+import { allBlogs } from '.contentlayer/generated';
+import { HomeCoverSection, FeaturedPosts, RecentPosts } from '@/components';
 
 const Homepage = () => {
   return (
