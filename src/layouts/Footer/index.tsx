@@ -1,7 +1,10 @@
 'use client';
-import React from 'react';
-import { DribbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '@/icons';
 import Link from 'next/link';
+
+// icons
+import { DribbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '@/icons';
+
+// utils
 import siteMetadata from '@/utils/siteMetaData';
 
 const Footer = () => {

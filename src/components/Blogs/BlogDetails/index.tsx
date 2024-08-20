@@ -1,6 +1,5 @@
 import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
-import React from 'react';
 import { slug } from 'github-slugger';
 import { Blog } from '.contentlayer/generated';
 
