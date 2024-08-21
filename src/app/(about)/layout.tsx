@@ -1,5 +1,5 @@
+import InSightRoll from '@/components/InSightRoll';
 import React from 'react';
-import { InSightRoll } from '@/components';
 
 const insights = [
   '20+ Projects Completed',

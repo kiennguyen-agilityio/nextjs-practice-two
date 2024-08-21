@@ -1,7 +1,8 @@
 // components
-import { ContactForm, LottieAnimation } from '@/components';
 
 // utils
+import ContactForm from '@/components/ContactForm';
+import LottieAnimation from '@/components/LottieAnimation';
 import siteMetadata from '@/utils/siteMetaData';
 
 export const metadata = {

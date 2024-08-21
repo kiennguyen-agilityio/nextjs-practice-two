@@ -10,8 +10,9 @@ import { allBlogs, Blog } from '.contentlayer/generated';
 import siteMetadata from '@/utils/siteMetaData';
 
 // components
-import { RenderMdx, BlogDetails } from '@/components';
 import Tag from '@/components/Tab';
+import BlogDetails from '@/components/Blogs/BlogDetails';
+import RenderMdx from '@/components/Blogs/RenderMdx';
 
 interface BlogPageParams {
   params: {
