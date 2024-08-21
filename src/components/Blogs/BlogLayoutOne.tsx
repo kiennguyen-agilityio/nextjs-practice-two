@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { slug } from 'github-slugger';
-import Tag from '../../Tab';
+import Tag from '../Tab';
 import { Blog } from '.contentlayer/generated';
 
 interface BlogLayoutOneProps {

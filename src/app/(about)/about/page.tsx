@@ -1,4 +1,5 @@
-import { AboutCoverSection, Skill } from '@/components';
+import AboutCoverSection from '@/components/AboutCoverSection';
+import Skill from '@/components/Skill';
 import Link from 'next/link';
 
 export const metadata = {

@@ -1,6 +1,7 @@
 import { sortBlogs } from '@/utils';
-import { BlogLayoutOne, BlogLayoutTwo } from '@/components';
 import { Blog } from '.contentlayer/generated';
+import BlogLayoutOne from '../Blogs/BlogLayoutOne';
+import BlogLayoutTwo from '../Blogs/BlogLayoutTwo';
 
 interface FeaturedPostsProps {
   blogs: Blog[];
