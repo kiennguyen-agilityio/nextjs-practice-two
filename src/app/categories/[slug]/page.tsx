@@ -40,7 +40,7 @@ interface CategoryPageProps {
   params: Params;
 }
 
-const CategoryPage: React.FC<CategoryPageProps> = ({ params }) => {
+const CategoryPage = ({ params }: CategoryPageProps) => {
   // Separating logic to create a list of categories from all blogs
   const allCategories: string[] = ['all']; // Initialize with 'all' category
   allBlogs.forEach((blog) => {
@@ -53,15 +53,13 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ params }) => {
     });
   });
 
-  // Sort allCategories to ensure they are in alphabetical order
   allCategories.sort();
 
-  // Step 2: Filter blogs based on the current category (params.slug)
   const blogs = allBlogs.filter((blog) => {
     if (params.slug === 'all') {
-      return true; // Include all blogs if 'all' category is selected
+      return true;
     }
-    return blog.tags?.some((tag) => slug(tag) === params.slug); // Added optional chaining (?.)
+    return blog.tags?.some((tag) => slug(tag) === params.slug);
   });
 
   return (

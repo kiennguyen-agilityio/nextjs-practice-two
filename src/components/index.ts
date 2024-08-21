@@ -10,3 +10,8 @@ export { default as HomeCoverSection } from './HomeCoverSection';
 export { default as Logo } from './Logo';
 export { default as RecentPosts } from './RecentPost';
 export { default as ThemeSwitch } from './common/ThemeSwitch';
+export { default as LottieAnimation } from './LottieAnimation';
+export { default as ContactForm } from './ContactForm';
+export { default as AboutCoverSection } from './AboutCoverSection';
+export { default as Skill } from './Skill';
+export { default as InSightRoll } from './InSightRoll';
