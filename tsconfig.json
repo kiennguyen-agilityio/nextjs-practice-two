@@ -28,8 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "jest.config.ts",
-    "src/layouts/Footer",
-    "src/utils/siteMetaData.js"
+    "src/layouts/Footer"
   ],
   "exclude": ["node_modules"]
 }
