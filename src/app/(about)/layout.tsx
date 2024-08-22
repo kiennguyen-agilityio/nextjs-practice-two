@@ -1,4 +1,3 @@
-import React from 'react';
 import { InSightRoll } from '@/components';
 
 const insights = [
@@ -15,7 +14,7 @@ interface AboutLayoutProps {
   children: React.ReactNode;
 }
 
-const AboutLayout: React.FC<AboutLayoutProps> = ({ children }) => {
+const AboutLayout = ({ children }: AboutLayoutProps) => {
   return (
     <main className="w-full flex flex-col items-center justify-between">
       <InSightRoll insights={insights} />
