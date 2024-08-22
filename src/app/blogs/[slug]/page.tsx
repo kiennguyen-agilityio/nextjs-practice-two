@@ -92,42 +92,42 @@ export default function BlogPage({ params }: BlogPageParams) {
     notFound();
   }
 
-  let imageList: string[] = [siteMetadata.socialBanner];
-  if (blog?.image) {
-    if (typeof blog.image.filePath === 'string') {
-      imageList = [
-        siteMetadata.siteUrl + blog.image.filePath.replace('../public', ''),
-      ];
-    } else if (Array.isArray(blog.image)) {
-      imageList = blog.image.map((img) =>
-        img.includes('http') ? img : siteMetadata.siteUrl + img,
-      );
-    }
-  }
+  // let imageList: string[] = [siteMetadata.socialBanner];
+  // if (blog?.image) {
+  //   if (typeof blog.image.filePath === 'string') {
+  //     imageList = [
+  //       siteMetadata.siteUrl + blog.image.filePath.replace('../public', ''),
+  //     ];
+  //   } else if (Array.isArray(blog.image)) {
+  //     imageList = blog.image.map((img) =>
+  //       img.includes('http') ? img : siteMetadata.siteUrl + img,
+  //     );
+  //   }
+  // }
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'NewsArticle',
-    headline: blog?.title,
-    description: blog?.description,
-    image: imageList,
-    datePublished: new Date(blog?.publishedAt).toISOString(),
-    dateModified: new Date(blog?.updatedAt || blog?.publishedAt).toISOString(),
-    author: [
-      {
-        '@type': 'Person',
-        name: blog?.author ? blog.author : siteMetadata.author,
-        url: siteMetadata.twitter,
-      },
-    ],
-  };
+  // const jsonLd = {
+  //   '@context': 'https://schema.org',
+  //   '@type': 'NewsArticle',
+  //   headline: blog?.title,
+  //   description: blog?.description,
+  //   image: imageList,
+  //   datePublished: new Date(blog?.publishedAt).toISOString(),
+  //   dateModified: new Date(blog?.updatedAt || blog?.publishedAt).toISOString(),
+  //   author: [
+  //     {
+  //       '@type': 'Person',
+  //       name: blog?.author ? blog.author : siteMetadata.author,
+  //       url: siteMetadata.twitter,
+  //     },
+  //   ],
+  // };
 
   return (
     <>
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      /> */}
       <article>
         <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
           <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
