@@ -1,4 +1,4 @@
-import { InSightRoll } from '@/components';
+import InSightRoll from '@/components/InSightRoll';
 
 const insights = [
   '20+ Projects Completed',

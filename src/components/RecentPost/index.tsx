@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { Blog } from '.contentlayer/generated';
 
 // components
-import { BlogLayoutThree } from '@/components';
 
 // utils
 import { sortBlogs } from '@/utils';
+import BlogLayoutThree from '../Blogs/BlogLayoutThree';
 
 interface FeaturedPostsProps {
   blogs: Blog[];
