@@ -6,10 +6,11 @@ import { useState } from 'react';
 import { LinkedinIcon, TwitterIcon, GithubIcon, DribbleIcon } from '@/icons';
 
 // components
-import { Logo, ThemeSwitch } from '@/components';
 
 // utils
 import siteMetadata from '@/utils/siteMetaData';
+import ThemeSwitch from '@/components/common/ThemeSwitch';
+import Logo from '@/components/Logo';
 
 const Header = () => {
   const [click, setClick] = useState(false);
